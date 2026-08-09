@@ -669,17 +669,12 @@ Directory
 [EXTRA] Two directories the deck's tree diagram omits that a DevOps engineer will use constantly:
 
 
-Directory
-	Purpose
-	/proc
-	Virtual filesystem - not real files on disk, a live window into kernel/process state (/proc/cpuinfo, /proc/<pid>/status)
-	/sys
-	Virtual filesystem exposing kernel and device driver information/tuning, used heavily for hardware and kernel parameter inspection
-	Self-Check Q and A
-1. Q: What's the practical difference in reliability between cd work and cd /home/user1/work when used inside a script that might run from an unpredictable starting directory? A: The relative form (cd work) depends entirely on where the script happens to be invoked from - it silently does the wrong thing (or errors) if the script's current directory assumption is wrong. The absolute form is unambiguous regardless of starting location, which is why scripts almost always prefer absolute paths for anything beyond trivial local operations.
-2. Q: You run cat /proc/cpuinfo and get real-looking output, but ls -l /proc/cpuinfo shows a file size of 0 bytes. Why? A: [EXTRA] /proc is a virtual (pseudo) filesystem - its "files" are not stored on disk at all; they are generated on-the-fly by the kernel when read. The 0-byte size reflects that there's no static file content, only a live kernel data feed presented through a filesystem-like interface.
-Changing Directories
-cd /home/user1/work
+| Directory | Purpose | /proc | Virtual filesystem - not real files on disk, a live window into kernel/process state (/proc/cpuinfo, /proc/<pid>/status) | /sys | Virtual filesystem exposing kernel and device driver information/tuning, used heavily for hardware and kernel parameter inspection | Self-Check Q and A |
+|---|---|---|---|---|---|---|
+| 1. Q: What's the practical difference in reliability between cd work and cd /home/user1/work when used inside a script that might run from an unpredictable starting directory? A: The relative form (cd work) depends entirely on where the script happens to be invoked from - it silently does the wrong thing (or errors) if the script's current directory assumption is wrong. The absolute form is unambiguous regardless of starting location, which is why scripts almost always prefer absolute paths for anything beyond trivial local operations. |  |  |  |  |  |  |
+| 2. Q: You run cat /proc/cpuinfo and get real-looking output, but ls -l /proc/cpuinfo shows a file size of 0 bytes. Why? A: [EXTRA] /proc is a virtual (pseudo) filesystem - its "files" are not stored on disk at all; they are generated on-the-fly by the kernel when read. The 0-byte size reflects that there's no static file content, only a live kernel data feed presented through a filesystem-like interface. |  |  |  |  |  |  |
+| Changing Directories |  |  |  |  |  |  |
+| cd /home/user1/work |  |  |  |  |  |  |
 
 
 cd ..
@@ -736,34 +731,11 @@ ls -R              # recursive listing
 -rw-r--r-- 1 islam islam 20 2 May 21 16:11 f1
 
 
-Field
-	Value
-	Meaning
-	1
-	-rw-r--r--
-	File type + permissions (covered fully in the permissions section)
-	2
-	1
-	Number of hard links
-	3
-	islam
-	Owning user
-	4
-	islam
-	Owning group
-	5
-	20
-	(In this deck's slightly non-standard example) size-related field
-	6-8
-	2 May 21 16:11
-	Last modification date and time
-	9
-	f1
-	Filename
-	Self-Check Q and A
-1. Q: ls dir1 shows nothing, but you know files exist inside it. What's the most likely reason, and what flag reveals them? A: The files are dotfiles (hidden files, names starting with .) - ls hides them by default. ls -a dir1 reveals all entries including hidden ones.
-2. Q: ls -l dir1 and ls -ld dir1 produce very different output for the same directory. What's the difference? A: ls -l dir1 lists the CONTENTS of dir1 in long format. ls -ld dir1 shows information ABOUT the dir1 entry itself (its own permissions, owner, size as a directory) without descending into it - the -d flag treats the directory as a single entry rather than a container to list.
-File Naming
+| Field | Value | Meaning | 1 | -rw-r--r-- | File type + permissions (covered fully in the permissions section) | 2 | 1 | Number of hard links | 3 | islam | Owning user | 4 | islam | Owning group | 5 | 20 | (In this deck's slightly non-standard example) size-related field | 6-8 | 2 May 21 16:11 | Last modification date and time | 9 | f1 | Filename | Self-Check Q and A |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1. Q: ls dir1 shows nothing, but you know files exist inside it. What's the most likely reason, and what flag reveals them? A: The files are dotfiles (hidden files, names starting with .) - ls hides them by default. ls -a dir1 reveals all entries including hidden ones. |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 2. Q: ls -l dir1 and ls -ld dir1 produce very different output for the same directory. What's the difference? A: ls -l dir1 lists the CONTENTS of dir1 in long format. ls -ld dir1 shows information ABOUT the dir1 entry itself (its own permissions, owner, size as a directory) without descending into it - the -d flag treats the directory as a single entry rather than a container to list. |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| File Naming |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 > [!quote] Deck's content File names may be up to 255 characters. There are no extensions in Linux. Avoid special characters as greater-than, less-than, question mark, asterisk, hash, apostrophe. File names are case sensitive.
 
 
