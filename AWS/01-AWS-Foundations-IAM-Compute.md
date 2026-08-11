@@ -7,11 +7,11 @@ date: {{date}}
 ---
 ---
 
-#☁️ AWS Architecture — Deep Study Guide for DevOps Engineers
+## AWS Architecture — Deep Study Guide for DevOps Engineers
 > [!info] Scope
 > This is not exam prep — it's a systems-level map of AWS the way a DevOps engineer actually uses it: provisioning compute, running containers/K8s, wiring networks, automating deploys, and keeping the whole thing observable and secure. Depth ranges from foundational (Cloud Practitioner) through Associate/DevOps-relevant internals where it matters.
 
-## 🗺️ Map of this vault
+##  Map of this vault
 ```dataview
 TABLE domain, depth
 FROM #aws-study
