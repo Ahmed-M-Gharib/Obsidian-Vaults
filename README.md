@@ -55,8 +55,9 @@ Connect With Me
 I am a Computer Science student and an aspiring Cloud/DevOps Engineer. I'm always open to discussing cloud architecture, automation, or potential collaborations
 
 LinkedIn: Ahmed Gharib
-Email: 
-ahmed.gharib2280@gmail.com
+
+Email: ahmed.gharib2280@gmail.com
+
 GitHub: @Ahmed-M-Gharib
+
 "If you don't document it, did you really learn it?"
-```
