@@ -1138,7 +1138,7 @@ aws iam simulate-principal-policy --policy-source-arn <role-arn> --action-names 
 
 ---
 
-# 🎯 Final Cross-Domain Rapid-Fire
+## Final Cross-Domain Rapid-Fire
 
 > [!question]- What's the single mental model that ties EC2, ECS, EKS, and Lambda together on the "who manages what" spectrum?
 > They form a ladder of decreasing operational responsibility: EC2 (you manage OS+runtime), ECS/EKS-on-EC2 (you manage nodes, AWS/K8s manages scheduling), ECS/EKS-on-Fargate (AWS manages compute entirely, you manage container spec), Lambda (AWS manages everything except your code) — the Shared Responsibility Model sliding further toward AWS at each rung, and each rung trading flexibility for reduced ops burden.
