@@ -51,7 +51,7 @@ Throughout this documentation, you will find notes and code snippets related to:
 2. View in Obsidian: For the best experience, clone this repository and open the folder directly in [Obsidian](https://obsidian.md/). This will activate the internal linking and graph view.
    ```bash
    git clone https://github.com/Ahmed-M-Gharib/Obsidian-Vaults.git
-   Connect With Me
+Connect With Me
 I am a Computer Science student and an aspiring Cloud/DevOps Engineer. I'm always open to discussing cloud architecture, automation, or potential collaborations
 
 LinkedIn: Ahmed Gharib
