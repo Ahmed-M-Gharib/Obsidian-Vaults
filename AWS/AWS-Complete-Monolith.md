@@ -1099,7 +1099,7 @@ graph LR
 
 ---
 
-# 🧾 Master AWS CLI Cheat Sheet
+# Master AWS CLI Cheat Sheet
 
 ```bash
 # ── Identity & Auth ─────────────────────────────────────────
