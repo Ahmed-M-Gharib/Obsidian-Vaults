@@ -5,11 +5,11 @@ category: devops
 status: active
 ---
 
-# ☁️ AWS Map of Content
+## AWS Map of Content
 
 Welcome to your AWS Cloud Architecture vault! This course covers everything from basic compute resources to advanced EKS orchestration and DevOps workflows.
 
-## 📚 Course Modules
+##  Course Modules
 
 ### [[01-AWS-Foundations-IAM-Compute]]
 *Shared Responsibility, Global Infrastructure, IAM, and EC2/ASG/ELB.*
